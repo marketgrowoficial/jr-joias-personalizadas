@@ -62,3 +62,15 @@
   .intro .introCopy h2{font-size:34px;line-height:.94}
   .intro .introDetails>p{width:100%;margin:0 0 16px;font-size:10px}
 }
+
+/* Mobile: preserve the full landscape artwork instead of cropping it vertically */
+@media(max-width:800px){
+  .intro{height:auto;min-height:0;background:#080706}
+  .intro>.introVisual{position:relative;inset:auto;width:100%;height:66.67vw;min-height:240px;max-height:360px;background:#050403}
+  .intro>.introVisual img{width:100%;height:100%;object-fit:contain;object-position:center}
+  .intro>.introGlow{display:none}
+  .intro .introInner{position:relative;inset:auto;height:auto;min-height:350px;padding:0;background:#0b0a09;backdrop-filter:none}
+  .intro .introBand{min-height:350px;padding-top:38px;padding-bottom:42px}
+  .intro .introCopy h2{font-size:33px;max-width:320px}
+  .intro .introDetails>p{max-width:330px;line-height:1.75}
+}
