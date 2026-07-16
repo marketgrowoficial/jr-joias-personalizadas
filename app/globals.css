@@ -34,3 +34,31 @@
   .intro .introCopy>p{font-size:11px;width:310px;margin-top:0}
   .collections{padding-top:90px}
 }
+
+/* Separate the artwork's embedded typography from the supporting copy */
+.intro{height:860px}
+.intro>.introGlow{background:linear-gradient(90deg,rgba(5,4,3,.35) 0%,rgba(5,4,3,.08) 48%,transparent 76%),linear-gradient(0deg,rgba(4,3,2,.62),transparent 38%)}
+.intro .introInner{position:absolute;left:0;right:0;bottom:0;height:245px;display:block;padding:0;background:rgba(10,9,8,.9);border-top:1px solid rgba(208,167,119,.24);backdrop-filter:blur(12px)}
+.intro .introBand{height:100%;display:grid;grid-template-columns:.75fr 1.25fr 1fr;gap:65px;align-items:center}
+.intro .introLabel{align-self:center;padding:0}
+.intro .introLabel .eyebrow{margin-bottom:16px}
+.intro .introCopy{width:auto}
+.intro .introCopy h2{font-size:43px;line-height:.96;margin:0}
+.introDetails{display:block}
+.intro .introDetails>p{color:#bcb3a9;font-size:11px;line-height:1.8;margin:0 0 22px}
+.introDetails>a{display:inline-block;padding-bottom:8px;border-bottom:1px solid #b99163;font-size:9px;text-transform:uppercase;letter-spacing:.14em;color:#eee6dc}
+.introDetails>a span{margin-left:12px;color:#d0a777}
+
+@media(max-width:800px){
+  .intro{height:790px}
+  .introVisual img{object-position:61% center}
+  .intro>.introGlow{background:linear-gradient(0deg,rgba(5,4,3,.58),transparent 50%)}
+  .intro .introInner{height:330px;padding:0;display:block}
+  .intro .introBand{display:grid;grid-template-columns:1fr;gap:18px;align-content:center;padding-top:28px;padding-bottom:28px}
+  .intro .introLabel{display:flex;align-items:center;justify-content:space-between;padding:0}
+  .intro .introLabel .eyebrow{margin:0}
+  .intro .introLabel span{display:block;width:130px;font-size:13px;text-align:right}
+  .intro .introCopy{width:auto}
+  .intro .introCopy h2{font-size:34px;line-height:.94}
+  .intro .introDetails>p{width:100%;margin:0 0 16px;font-size:10px}
+}

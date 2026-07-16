@@ -36,12 +36,16 @@ export default function Home() {
       <section className="intro">
         <div className="introVisual"><img src="/og.png" alt="JR Joias — Sentimentos eternizados em joias" /></div>
         <div className="introGlow" />
-        <div className="introInner shell">
-          <div className="introLabel"><p className="eyebrow">Nossa essência</p><span>Desde Itu, para histórias de todo o Brasil</span></div>
-          <div className="introCopy">
-            <h2>Mais que uma joia.<br />Um capítulo da sua <em>história.</em></h2>
-            <p>Há mais de mil criações compartilhadas e uma comunidade de mais de 35 mil pessoas que escolheram eternizar seus momentos conosco.</p>
-            <a href="#colecoes">Conheça nossas coleções <span>↓</span></a>
+        <div className="introInner">
+          <div className="introBand shell">
+            <div className="introLabel"><p className="eyebrow">Nossa essência</p><span>Desde Itu, para histórias de todo o Brasil</span></div>
+            <div className="introCopy">
+              <h2>Mais que uma joia.<br />Um capítulo da sua <em>história.</em></h2>
+            </div>
+            <div className="introDetails">
+              <p>Há mais de mil criações compartilhadas e uma comunidade de mais de 35 mil pessoas que escolheram eternizar seus momentos conosco.</p>
+              <a href="#colecoes">Conheça nossas coleções <span>↓</span></a>
+            </div>
           </div>
         </div>
       </section>
