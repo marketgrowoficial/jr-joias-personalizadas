@@ -1,0 +1,21 @@
+import type { Metadata } from "next";
+import { headers } from "next/headers";
+import "./globals.css";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const incoming = await headers();
+  const host = incoming.get("x-forwarded-host") ?? incoming.get("host") ?? "localhost:3000";
+  const protocol = incoming.get("x-forwarded-proto") ?? (host.includes("localhost") ? "http" : "https");
+  const image = `${protocol}://${host}/og.png`;
+  const title = "JR Joias Personalizadas | Sentimentos eternizados em joias";
+  const description = "Joias personalizadas, alianças e presentes criados para eternizar sua história. Atendimento em Itu e envios para todo o Brasil.";
+  return {
+    title, description, icons: { icon: "/logo.jpg" },
+    openGraph: { title, description, images: [{ url: image, width: 1536, height: 1024, alt: "JR Joias — Sentimentos eternizados em joias" }] },
+    twitter: { card: "summary_large_image", title, description, images: [image] },
+  };
+}
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="pt-BR"><body>{children}</body></html>;
+}
